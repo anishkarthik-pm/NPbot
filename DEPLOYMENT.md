@@ -53,7 +53,7 @@ Railway is the easiest and most suitable platform for this application.
 3. **Configure**:
    - **Environment**: Python 3
    - **Build Command**: `pip install -r requirements.txt`
-   - **Start Command**: `uvicorn api_server:app --host 0.0.0.0 --port $PORT`
+   - **Start Command**: `sh -c 'uvicorn api_server:app --host 0.0.0.0 --port ${PORT:-8000}'`
    - **Python Version**: 3.11.9
 
 4. **Add Disk**:
