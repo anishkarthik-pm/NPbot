@@ -114,19 +114,20 @@ Answer clearly and concisely.
 
 if __name__ == "__main__":
     import uvicorn
-    
+
     # Check for required environment variables
     if not os.getenv("OPENROUTER_API_KEY"):
         print("WARNING: OPENROUTER_API_KEY environment variable is not set")
         print("The API will not function properly without it.")
         print("Set it with: export OPENROUTER_API_KEY=your_key")
         print()
-    
+
     # Run the server
+    port = int(os.getenv("PORT", "8000"))
     uvicorn.run(
         "api_server:app",
         host="0.0.0.0",
-        port=8000,
+        port=port,
         reload=True
     )
 
