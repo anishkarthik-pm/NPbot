@@ -231,10 +231,11 @@ def main():
     elif args.server:
         import uvicorn
         from api_server import app
+        port = int(os.getenv("PORT", "8000"))
         print("Starting NPbot API server...")
-        print("API will be available at http://localhost:8000")
-        print("API docs at http://localhost:8000/docs")
-        uvicorn.run(app, host="0.0.0.0", port=8000)
+        print(f"API will be available at http://localhost:{port}")
+        print(f"API docs at http://localhost:{port}/docs")
+        uvicorn.run(app, host="0.0.0.0", port=port)
     else:
         parser.print_help()
         sys.exit(1)
