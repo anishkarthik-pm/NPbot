@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [],
+  "routes": [],
+  "github": {
+    "silent": true
+  },
+  "installCommand": "echo 'This project cannot be deployed on Vercel. See README.md for deployment instructions.'",
+  "buildCommand": "echo 'ERROR: This application requires persistent storage, background jobs, and ML packages that exceed Vercel serverless limits. Please deploy to Railway, Render, or a similar platform that supports persistent storage. See README.md for details.' && exit 1"
+}
