@@ -23,12 +23,10 @@ wheels/
 .installed.cfg
 *.egg
 
-# Data
-data/
-*.json
-!requirements.txt
-!vercel.json
-!railway.json
+# Git
+.git/
+.gitignore
+.gitattributes
 
 # IDE
 .vscode/
@@ -37,15 +35,20 @@ data/
 *.swo
 *~
 
-# Environment
-.env
-.env.local
-
-# Logs
-*.log
-logs/
-
 # OS
 .DS_Store
 Thumbs.db
 
+# Documentation
+*.md
+!README.md
+
+# Test files
+test_*.py
+*_test.py
+
+# Local data (don't copy to image, use volumes)
+data/
+
+# Logs
+*.log
